@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dictionary App</title>
+</head>
+<body>
+    <h1>Dictionary App</h1>
+    <form method="POST" action="/">
+        <input type="text" name="keyword" placeholder="Enter a word" required>
+        <button type="submit">Search</button>
+    </form>
+    {% if definition %}
+        <h2>Definition of "{{ keyword }}"</h2>
+        <p>{{ definition }}</p>
+    {% elif error %}
+        <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>
